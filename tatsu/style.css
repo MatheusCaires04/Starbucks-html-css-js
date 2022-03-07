@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --primary-color: #e2e2e2;
+    --secundary-color: rgb(244, 246, 250);
+    --bg-btn: rgb(88, 101, 242);
+    --bg-body: #282a2e;
+    --bg-navbar: rgba(20, 22, 27, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    background-color: var(--bg-body);
+    background-image: url('./img/bgBody.png');
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--bg-navbar);
+    position: fixed;
+}
+
+.navbar {
+    width: 90%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.navbar .logo {
+    width: 180px;
+}
+
+.navbar .logo img {
+    width: 80%;
+    cursor: pointer;
+}
+
+.navbar .navbar-menu-hamburger {
+    display: none;
+    flex: 1;
+}
+
+.navbar .navbar-menu-hamburger input {
+    display: none;
+}
+
+.navbar .navbar-menu-hamburger label {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    float: right;
+}
+
+.navbar .navbar-menu {
+    display: flex;
+}
+
+.navbar .navbar-menu li {
+    margin: 0 15px;
+}
+
+.navbar .navbar-menu li:nth-child(1) {
+    margin-left: 0;
+}
+
+.navbar .navbar-menu li:nth-child(5) {
+    margin-right: 0;
+}
+
+.navbar .navbar-menu li a {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.login {
+    flex: 1;
+    display: block;
+}
+
+.login .btn-login {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    padding: 10px 25px;
+    background-color: var(--bg-btn);
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    float: right;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+.login .btn-login:hover {
+    cursor: pointer;
+    color: var(--bg-btn);
+    background-color: var(--primary-color);
+}
+
+.login .btn-login:hover i {
+    color: var(--bg-btn);
+}
+
+.login .second {
+    display: none;
+}
+
+.login .btn-login i {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-right: 10px;
+}
+
+/* RESPONSIVIDADE MENU */
+@media (max-width: 1200px) {
+    .login .btn-login {
+       display: none; 
+    }
+
+    .login .second {
+        display: flex;
+    }
+    
+}
+
+@media (max-width: 990px) {
+    .navbar .login {
+        display: none;
+    }
+
+    .navbar .navbar-menu {
+        display: none;
+    }
+
+    .navbar .navbar-menu-hamburger {
+        display: block;
+    }
+}
+
+.content {
+    width: 100%;
+    padding-top: 120px;
+}
