@@ -6,6 +6,8 @@
     --bg-btn: rgb(88, 101, 242);
     --bg-body: #282a2e;
     --bg-navbar: rgba(20, 22, 27, 0.6);
+    --text-color: #00A3FF;
+    --text-color2: #5865F2;
 }
 
 * {
@@ -25,6 +27,25 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+/* CSS GENERAL */
+.btn {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 10px 25px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
 .header {
     width: 100%;
     background-color: var(--bg-navbar);
@@ -40,47 +61,47 @@ body {
     position: relative;
 }
 
-.navbar .logo {
+ .logo {
     width: 180px;
 }
 
-.navbar .logo img {
+.logo img {
     width: 80%;
     cursor: pointer;
 }
 
-.navbar .navbar-menu-hamburger {
+.navbar-menu-hamburger {
     display: none;
     flex: 1;
 }
 
-.navbar .navbar-menu-hamburger input {
+.navbar-menu-hamburger input {
     display: none;
 }
 
-.navbar .navbar-menu-hamburger label {
+.navbar-menu-hamburger label {
     font-size: 1.4rem;
     color: var(--primary-color);
     float: right;
 }
 
-.navbar .navbar-menu {
+.navbar-menu {
     display: flex;
 }
 
-.navbar .navbar-menu li {
+.navbar-menu li {
     margin: 0 15px;
 }
 
-.navbar .navbar-menu li:nth-child(1) {
+.navbar-menu li:nth-child(1) {
     margin-left: 0;
 }
 
-.navbar .navbar-menu li:nth-child(5) {
+.navbar-menu li:nth-child(5) {
     margin-right: 0;
 }
 
-.navbar .navbar-menu li a {
+.navbar-menu li a {
     color: var(--primary-color);
     font-size: 1.2rem;
 }
@@ -90,75 +111,200 @@ body {
     display: block;
 }
 
-.login .btn-login {
-    display: flex;
-    align-items: center;
-    font-size: 1.1rem;
-    font-weight: 700;
+.btn-login {
     color: var(--primary-color);
-    padding: 10px 25px;
     background-color: var(--bg-btn);
     border: 2px solid var(--primary-color);
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
     float: right;
-    transition: all .3s;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
 }
 
-.login .btn-login:hover {
+.btn-login:hover {
     cursor: pointer;
     color: var(--bg-btn);
     background-color: var(--primary-color);
 }
 
-.login .btn-login:hover i {
+.btn-login:hover i {
     color: var(--bg-btn);
 }
 
-.login .second {
+.second {
     display: none;
 }
 
-.login .btn-login i {
+.btn-login i {
     color: var(--primary-color);
     font-size: 1.6rem;
     margin-right: 10px;
 }
 
-/* RESPONSIVIDADE MENU */
+.content {
+    width: 100%;
+    display: block;
+    padding-top: 120px;
+}
+
+.discord-community {
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.discord-community-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-level-up {
+    white-space: nowrap;
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin: 15px 0 30px 0;
+}
+
+.text-level-up span {
+    line-height: 4rem;
+}
+
+.text-level-up span:nth-child(1) {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.text-level-up span:nth-child(4) {
+    color: var(--text-color2);
+}
+
+.text {
+    width: 85%;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 30px 0;
+}
+
+.links-btn {
+    width: 100%;
+    display: flex;
+    margin: 30px 0 15px 0;
+}
+
+.add-tutson {
+    color: var(--primary-color);
+    background-color: var(--bg-btn);
+    border: 2px solid var(--primary-color);
+    margin-right: 20px;
+}
+
+.add-tutson:hover {
+    cursor: pointer;
+    color: var(--bg-btn);
+    background-color: var(--primary-color);
+}
+
+.login-dashboard {
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+}
+
+.login-dashboard:hover {
+    background-color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.discord-community-image {
+    width: 50%;
+    display: flex;
+}
+
+.discord-community-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.discord-community-text-width990 {
+    display: none;
+}
+
+/* RESPONSIVE */
+
 @media (max-width: 1200px) {
-    .login .btn-login {
+    /*MENU*/
+    .btn-login {
        display: none; 
     }
 
-    .login .second {
+    .second {
         display: flex;
     }
+
+    /*CONTENT SECTION ONE*/
+    .discord-community-text {
+        width: 500px;
+    }
+
+    .text-level-up {
+        font-size: 2.8rem;
+    }
     
+    .text-level-up span {
+        line-height: 3.5rem;
+    }
+
+    .discord-community-image {
+        flex: 1;
+    }
 }
 
 @media (max-width: 990px) {
-    .navbar .login {
+    /*MENU*/
+    .login {
         display: none;
     }
 
-    .navbar .navbar-menu {
+    .navbar-menu {
         display: none;
     }
 
-    .navbar .navbar-menu-hamburger {
+    .navbar-menu-hamburger {
         display: block;
     }
-}
 
-.content {
-    width: 100%;
-    padding-top: 120px;
+    .discord-community-image,
+    .discord-community-text {
+        display: none;
+    }
+
+    .discord-community-text-width990 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-level-up {
+        text-align: start;
+        font-size: 2.3rem;
+    }
+
+    .images {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .images img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .text {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+
+    .links-btn {
+        justify-content: center;
+    }
 }
