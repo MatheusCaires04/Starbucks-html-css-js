@@ -288,15 +288,60 @@ body::-webkit-scrollbar-thumb {
 .footer-top {
     display: flex;
     width: 80%;
-    margin: 3rem auto;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--text-footer-color);
+    padding: 3rem 0 1.5rem 0;
 }
 
 .links {
     width: 15%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.links h2 {
+    font-size: 1.1rem;
+    color: var(--icons-footer-color);
+    margin-bottom: 1.8rem;
+}
+
+.links ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.links ul a {
+    color: var(--text-footer-color);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.links ul a:hover {
+    color: var(--icons-footer-color);
 }
 
 .link-image {
     width: 40%;
+}
+
+.link-image img {
+    width: 130px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem 0 3rem 0;
+}
+
+.footer-icons {
+    display: inline-flex;
+    margin: 0 0 1.5rem 0;
 }
 
 .footer-icons a {
@@ -305,6 +350,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 15px;
     background-color: var(--text-navbar-color);
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -332,6 +378,36 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
 }
 
+.footer-links-tag {
+    display: flex;
+}
+
+.footer-links-tag li {
+    padding: 0 1.6rem;
+    border-right: 1px solid var(--icons-footer-color);
+}
+
+.footer-links-tag li:nth-child(1) {
+    padding-left: 0;
+}
+
+.footer-links-tag li:nth-child(4) {
+    border: none;
+}
+
+.footer-links-tag a {
+    color: var(--text-navbar-color);
+    font-size: 1rem;
+}
+
+.footer-links-tag a:hover {
+    color: var(--text-footer-color);
+}
+
+.footer-bottom span {
+    margin-top: 1.5rem;
+}
+
 @media (min-width: 1600px) {
     #slider {
         width: 90%;
@@ -352,6 +428,14 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 1124px) {
     .btn-promotion {
         display: none;
+    }
+
+    .links {
+        width: 20%;
+    }
+
+    .link-image {
+        width: 20%;
     }
 }
 
