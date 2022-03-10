@@ -6,8 +6,7 @@ let time = 5000,
     imagesMobile = document
                 .querySelectorAll("#slider-mobile img")
     max = images.length,
-    maxMobile = imagesMobile.length,
-    tela = document.querySelector('header').clientWidth;
+    maxMobile = imagesMobile.length;
 
 function nextImage() {
 
@@ -15,7 +14,6 @@ function nextImage() {
         .classList.remove("selected")
     imagesMobile[currentImageMobileIndex]
         .classList.remove("selected-mobile")
-    console.log(tela)
 
     currentImageIndex++
     currentImageMobileIndex++
