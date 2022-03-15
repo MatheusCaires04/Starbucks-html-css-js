@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --font-size: 16px;
+    --font-size-m: 14px;
+    --font-size-s: 10px;
+    --bg-main: #5d2ce6;
+    --color-primary: #FFF;
+    --color-orange: #ff6324;
+    --color-icon: rgb(1, 199, 1);
+    --color-form-font: #000;
+    --color-footer: #511ac4;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--color-primary);
+    font-size: var(--font-size);
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    border-bottom: 3px solid var(--color-orange);
+}
+
+.logo {
+    margin: auto;
+    width: 75px;
+    height: 40px;
+}
+
+.image-wrapper {
+    background-image: url('../images/mulher-exercicio.png');
+    width: 100%;
+    height: 500px;
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-wrapper-content {
+    width: 35%;
+    margin: 70px auto;
+}
+
+.content-wrapper {
+    width: 67%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.content-wrapper .image {
+    width: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-right: 1px solid var(--color-orange);
+}
+
+.image img {
+    width: 90%;
+    cursor: pointer;
+}
+
+.content-wrapper .text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-left: 1px solid var(--color-orange);
+}
+
+.text p {
+    width: 90%;
+    font-size: 1.36rem;
+    line-height: 2rem;
+}
+
+.wrapper {
+    width: 67%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.left-wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.left-wrapper p, li {
+    width: 90%;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.5rem;
+}
+
+.left-wrapper h2 {
+    width: 90%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.left-wrapper li {
+    display: flex;
+    align-items: center;
+}
+
+.left-wrapper li i {
+    margin-right: 15px;
+    color: var(--color-icon);
+    font-size: 1.5rem;
+}
+
+.left-wrapper p:nth-child(9) {
+    color: var(--color-orange);
+    font-size: 1.8rem;
+    margin-top: 40px;
+}
+
+.left-wrapper p:nth-child(10) {
+    font-size: 1.7rem;
+}
+
+.right-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-end {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid var(--color-orange);
+}
+
+.flex-end h1 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin: 30px 50px;
+    text-align: center;
+}
+
+.form {
+    background-color: var(--color-primary);
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-form-font);
+    height: 100%;
+}
+
+.form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.form label:nth-child(18) {
+    margin-top: 20px;
+}
+
+.form p {
+    margin: 15px 0;
+}
+
+.radio-checked {
+    margin-bottom: 5px; 
+}
+
+.radio-checked input {
+    margin-right: 5px;
+}
+
+.checked {
+    margin-top: 10px;
+}
+
+.form-input {
+    margin-bottom: 10px;
+    font-size: 1.1rem;  
+    padding: 5px 8px;
+    border: none;
+    background-color: rgb(230, 230, 230);
+}
+
+.form a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-orange);
+    border: none;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--color-primary);
+}
+
+.footer {
+    width: 100%;
+    background-color: var(--color-footer);
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    border-bottom: 3px solid var(--color-orange);
+}
+
+.logo-whatsapp-fixed {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    cursor: pointer;
+    animation: loop 2s infinite;
+    -webkit-animation: loop 1s infinite;
+}
+
+@keyframes loop {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        -moz-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+        -o-transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 1024px) {
+    .image-wrapper-content {
+        width: 50%;
+    }
+    
+    .content-wrapper {
+        width: 90%;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+    
+    .logo-whatsapp-fixed {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: var(--font-size-m);
+    }
+
+    .flex-end {
+        width: 100%;
+    }
+
+    .flex-end h1 {
+        margin: 20px 20px;
+    }
+    
+    .logo-whatsapp-fixed {
+        width: 50px;
+        height: 50px;
+    }
+
+    .form a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        font-size: var(--font-size-s);
+    }
+
+    .image-wrapper-content {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .content-wrapper .image {
+        width: 100%;
+        border: none;
+    }
+
+    .content-wrapper .text {
+        width: 100%;
+        border-right: 2px;
+        margin-top: 15px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .left-wrapper {
+        width: 100%;
+    }
+
+    .right-wrapper {
+        width: 100%;
+    }
+
+    .form a {
+        font-size: 0.8rem;
+    }
+
+    .form label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .form-input {
+        font-size: 0.8rem; 
+    }
+
+    .footer img {
+        width: 40%;
+    }
+    
+    .logo-whatsapp-fixed {
+        width: 50px;
+        height: 50px;
+    }
+}
